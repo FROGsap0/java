@@ -1,0 +1,19 @@
+  public static void main(String[] args) {
+
+    System.out.println("Digite uma palavra para verificar se é um palíndromo:");
+    Scanner scanner = new Scanner(System.in);
+    String palavra = scanner.nextLine();
+    String palavraInvertida = new StringBuilder(palavra).reverse().toString();
+    if (palavra.equalsIgnoreCase(palavraInvertida)) {
+        System.out.println("A palavra é um palíndromo.");
+    } else {
+        System.out.println("A palavra não é um palíndromo.");
+    }
+        //voltar ao menu
+        System.out.println("Voltar a pagina inicial? (s/n)");
+        char resposta = scanner.next().charAt(0);
+        if (resposta == 's' || resposta == 'S') { main(null);
+        } else { System.out.println("Programa encerrado."); }
+    scanner.close();
+    }
+}
