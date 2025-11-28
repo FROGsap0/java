@@ -1,0 +1,73 @@
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("MENU:");
+        System.out.println("1 - Somar");
+        System.out.println("2 - Multiplicar");
+        System.out.println("3 - Dividir");
+        System.out.print("Escolha uma opção: ");
+
+        int opcao = scanner.nextInt();
+        //somar
+        if (opcao == 1) {
+            scanner.nextLine();
+            System.out.println("Digite o primeiro número:");
+            double num1 = scanner.nextDouble();
+            System.out.println("Digite o segundo número:");
+            double num2 = scanner.nextDouble();
+            double soma = num1 + num2;
+            System.out.println("O resultado da soma é:" + soma);
+            //voltar ao menu
+            System.out.println("Voltar a pagina inicial? (s/n)");
+            char resposta = scanner.next().charAt(0);
+            if (resposta == 's' || resposta == 'S') {
+                main(null);
+            } else {
+                System.out.println("Programa encerrado.");
+            }
+
+            //multiplicar
+        } else if (opcao == 2) {
+            System.out.println("Digite o primeiro número:");
+            double num1 = scanner.nextDouble();
+            System.out.println("Digite o segundo número:");
+            double num2 = scanner.nextDouble();
+            double multiplicacao = num1 * num2;
+            System.out.println("O resultado da multiplicação é:" + multiplicacao);
+
+            //voltar ao menu
+            System.out.println("Voltar a pagina inicial? (s/n)");
+            char resposta = scanner.next().charAt(0);
+            if (resposta == 's' || resposta == 'S') {
+                main(null);
+            } else {
+                System.out.println("Programa encerrado.");
+            }
+            //dividir
+        } else if (opcao == 3) {
+            System.out.println("Digite o primeiro número:");
+            double num1 = scanner.nextDouble();
+            System.out.println("Digite o segundo número:");
+            double num2 = scanner.nextDouble();
+            if (num2 != 0) {
+                double divisao = num1 / num2;
+                System.out.println("O resultado da divisão é:" + divisao);
+
+                //voltar ao menu
+                System.out.println("Voltar a pagina inicial? (s/n)");
+                char resposta = scanner.next().charAt(0);
+                if (resposta == 's' || resposta == 'S') {
+                    main(null);
+                } else {
+                    System.out.println("Programa encerrado.");
+                }
+            } else {
+                System.out.println("Opção inválida.");
+            }
+
+            scanner.close();
+        }
+    }
+}
