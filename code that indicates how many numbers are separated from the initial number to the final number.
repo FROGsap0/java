@@ -1,0 +1,19 @@
+public class Main {
+
+        }public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Digitr um número inicial:");
+    int numeroInicial = scanner.nextInt();
+    System.out.println("Digite um número final:");
+    int numeroFinal = scanner.nextInt();
+    ArrayList<Integer> totalDeNumeros = new ArrayList<>();
+    for (int i = numeroInicial; i <= numeroFinal; i++) {
+        totalDeNumeros.add(i);
+    }
+    System.out.println("Números entre " + numeroInicial + " e " + numeroFinal + ": " + totalDeNumeros);
+    //voltar ao menu
+    System.out.println("Voltar a pagina inicial? (s/n)");
+    char resposta = scanner.next().charAt(0);
+    if (resposta == 's' || resposta == 'S') { main(null);
+    } else { System.out.println("Programa encerrado."); }
+}
