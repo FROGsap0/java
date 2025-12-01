@@ -1,0 +1,42 @@
+public class Main {
+
+        }public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite uma frase!:");
+        String frase = scanner.nextLine();
+        String totalVogais = contarVogais(frase);
+        System.out.println(totalVogais);
+
+    //voltar ao menu
+    System.out.println("Voltar a pagina inicial? (s/n)");
+    char resposta = scanner.next().charAt(0);
+    if (resposta == 's' || resposta == 'S') { main(null);
+    } else { System.out.println("Programa encerrado."); }
+
+}
+private static String contarVogais(String frase) {
+    int a = 0, e = 0, i = 0, o = 0, u = 0;
+    frase = frase.toLowerCase();
+    for (int j = 0; j < frase.length(); j++) {
+        char letra = frase.charAt(j);
+        switch (letra) {
+            case 'a':
+                a++;
+                break;
+            case 'e':
+                e++;
+                break;
+            case 'i':
+                i++;
+                break;
+            case 'o':
+                o++;
+                break;
+            case 'u':
+                u++;
+                break;
+        }
+
+    }
+    return "Vogais na frase:\nA: " + a + "\nE: " + e + "\nI: " + i + "\nO: " + o + "\nU: " + u;
+}
